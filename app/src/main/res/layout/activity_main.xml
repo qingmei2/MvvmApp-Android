@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="student"
+            type="com.mei_husky.samplemvvm.Student" />
+
+        <variable
+            name="presenter"
+            type="com.mei_husky.samplemvvm.MainActivity.Presenter" />
+
+        <import type="com.mei_husky.samplemvvm.MyUtils" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context="com.mei_husky.samplemvvm.MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{presenter.onClick}"
+            android:text="@{student.name ?? student.age == 0 ? String.valueOf(MyUtils.addAge(student.age)) : String.valueOf(student.age)}"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> presenter.toastAge(student)}"
+            android:text="@{String.valueOf(student.age) + @string/app_name + `wow!`}"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+</layout>
