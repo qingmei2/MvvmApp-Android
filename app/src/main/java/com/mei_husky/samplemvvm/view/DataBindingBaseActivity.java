@@ -10,11 +10,16 @@ import com.mei_husky.samplemvvm.R;
 import com.mei_husky.samplemvvm.databinding.ActivityDataBindingBaseBinding;
 import com.mei_husky.samplemvvm.model.Student;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DataBindingBaseActivity extends AppCompatActivity {
 
     private ActivityDataBindingBaseBinding binding;
 
     private Student student;
+
+    private List<String> contents = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +29,16 @@ public class DataBindingBaseActivity extends AppCompatActivity {
 
     private void inject() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding_base);
+
         student = new Student("qingMei2", 12);
+        contents.add("content -> 0");
+        contents.add("content -> 1");
 
 //        以下两种方式 给XML中 student 赋值
 //        binding.setStudent(student);
         binding.setVariable(BR.student, student);
         binding.setPresenter(new Presenter());
+        binding.setContents(contents);
     }
 
     public class Presenter {

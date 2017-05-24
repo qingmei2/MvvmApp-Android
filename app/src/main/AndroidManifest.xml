@@ -18,7 +18,7 @@
         </activity>
 
         <activity
-            android:label="DataBinding基础"
+            android:label="DataBindingBase"
             android:name=".view.DataBindingBaseActivity"/>
     </application>
 
