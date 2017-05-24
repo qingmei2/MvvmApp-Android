@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <!--DataBinding支持AutoComplete，所以type填入Student，就可以像在代码里一样进行导包了-->
+        <!--The user variable within data describes a property that may be used within this layout.-->
+        <variable
+            name="student"
+            type="com.mei_husky.samplemvvm.model.Student" />
+
+        <variable
+            name="presenter"
+            type="com.mei_husky.samplemvvm.view.DataBindingBaseActivity.Presenter" />
+
+        <!--非lang包的类都需要import（比如工具类），然后就可以使用其方法了-->
+        <import type="com.mei_husky.samplemvvm.util.MyUtils" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.mei_husky.samplemvvm.view.DataBindingBaseActivity">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入FirstName" />
+
+        <!--固定字符 我们可以用 `` 包裹-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@{`请输入年龄`}"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> presenter.onNameClick(student.name)}"
+            android:text="@{`Student FirstName :` + student.name}"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() ->  presenter.onAgeClick(student.age)}"
+            android:text="@{`Student 年龄 :` + student.age}"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</layout>

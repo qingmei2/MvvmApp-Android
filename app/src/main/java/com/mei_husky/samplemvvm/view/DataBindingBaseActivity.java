@@ -1,0 +1,48 @@
+package com.mei_husky.samplemvvm.view;
+
+import android.databinding.DataBindingUtil;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
+
+import com.mei_husky.samplemvvm.BR;
+import com.mei_husky.samplemvvm.R;
+import com.mei_husky.samplemvvm.databinding.ActivityDataBindingBaseBinding;
+import com.mei_husky.samplemvvm.model.Student;
+
+public class DataBindingBaseActivity extends AppCompatActivity {
+
+    private ActivityDataBindingBaseBinding binding;
+
+    private Student student;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        inject();
+    }
+
+    private void inject() {
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding_base);
+        student = new Student("qingMei2", 12);
+
+//        以下两种方式 给XML中 student 赋值
+//        binding.setStudent(student);
+        binding.setVariable(BR.student, student);
+        binding.setPresenter(new Presenter());
+    }
+
+    public class Presenter {
+
+        public void onNameClick(String Name) {
+            Toast.makeText(DataBindingBaseActivity.this, Name, Toast.LENGTH_SHORT).show();
+        }
+
+
+        public void onAgeClick(int age) {
+            Toast.makeText(DataBindingBaseActivity.this, String.valueOf(age), Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+}

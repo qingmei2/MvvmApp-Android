@@ -1,4 +1,4 @@
-package com.mei_husky.samplemvvm;
+package com.mei_husky.samplemvvm.util;
 
 /**
  * Created by QingMei on 2017/5/21 22:34
