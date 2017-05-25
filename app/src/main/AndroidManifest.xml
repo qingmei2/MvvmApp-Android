@@ -16,10 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:label="DataBindingBase"
-            android:name=".view.DataBindingBaseActivity"/>
+            android:name=".view.DataBindingBaseActivity"
+            android:label="DataBindingBase" />
+        <activity android:name=".view.RecyclerBindActivity"></activity>
     </application>
 
 </manifest>
