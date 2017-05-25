@@ -35,18 +35,7 @@
         android:orientation="vertical"
         tools:context="com.mei_husky.samplemvvm.view.DataBindingBaseActivity">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="请输入FirstName" />
-
         <!--固定字符 我们可以用 `` 包裹，对应的，外部用""包裹-->
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@{`请输入年龄`}"
-            android:inputType="number" />
-
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -83,6 +72,40 @@
             android:gravity="center_horizontal"
             android:text="@{`引用资源文件 appName -> ` + @string/app_name}" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() ->  presenter.onAgeAdd3()}"
+            android:text="@{`ObservableObjects绑定 age+3`}"
+            android:textAllCaps="false"
+            android:textSize="14sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() ->  presenter.onNameAppendPoint()}"
+            android:text="@{`ObservableField绑定 name + 「.」`}"
+            android:textAllCaps="false"
+            android:textSize="14sp" />
+
+        <!--ObservableMap-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@{`ObservableMap,String =` + presenter.datas[`string`]}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@{`ObservableMap,int =` + presenter.datas[`int`]}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@{`ObservableMap,Student =` + presenter.datas[`student`]}" />
 
     </LinearLayout>
 </layout>

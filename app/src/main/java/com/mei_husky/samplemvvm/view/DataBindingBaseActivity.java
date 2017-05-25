@@ -1,6 +1,7 @@
 package com.mei_husky.samplemvvm.view;
 
 import android.databinding.DataBindingUtil;
+import android.databinding.ObservableArrayMap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
@@ -52,6 +53,29 @@ public class DataBindingBaseActivity extends AppCompatActivity {
             Toast.makeText(DataBindingBaseActivity.this, String.valueOf(age), Toast.LENGTH_SHORT).show();
         }
 
+        /**
+         * 监听器和对象绑定 ,详情请查看Student类
+         * {@link Student}
+         */
+
+        //ObservableObject 实现动态更新数据
+        public void onAgeAdd3() {
+            student.setAge(student.getAge() + 3);
+        }
+
+        //ObservableField 实现动态更新数据（更清晰明了）
+        public void onNameAppendPoint() {
+            student.name.set(student.name.get() + ".");
+        }
+
+        // Observable Collections
+        public ObservableArrayMap<String, Object> datas = new ObservableArrayMap<>();
+
+        {
+            datas.put("string", "我是字符串");
+            datas.put("int", 1000);
+            datas.put("student", student);
+        }
     }
 
 }
