@@ -11,7 +11,7 @@ import com.mei_husky.samplemvvm.R;
 import com.mei_husky.samplemvvm.databinding.ActivityRecyclerBindBinding;
 import com.mei_husky.samplemvvm.model.Student;
 import com.mei_husky.samplemvvm.view.adapter.SimpleBindAdapter;
-import com.mei_husky.samplemvvm.view.adapter.base.BaseBindingPresenter;
+import com.mei_husky.samplemvvm.view.adapter.base.IBaseBindingPresenter;
 
 import java.util.ArrayList;
 
@@ -34,12 +34,12 @@ public class RecyclerBindActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         SimpleBindAdapter adapter = new SimpleBindAdapter(students, R.layout.item_recycler_view);
-        adapter.setItemPresenter(new RecyclerBindPresenter());
+        adapter.setItemPresenter(new RecyclerBindPresenterI());
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(adapter);
     }
 
-    public class RecyclerBindPresenter implements BaseBindingPresenter {
+    public class RecyclerBindPresenterI implements IBaseBindingPresenter {
 
         public void onNameClick(Student student) {
             Toast.makeText(RecyclerBindActivity.this, student.name.get() + "要改名字", Toast.LENGTH_SHORT).show();

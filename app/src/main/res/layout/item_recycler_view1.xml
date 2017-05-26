@@ -5,7 +5,7 @@
 
         <variable
             name="itemPresenter"
-            type="com.mei_husky.samplemvvm.view.activity.MulTypeRecyclerBindActivity.MulRecyclerBindPresenter" />
+            type="com.mei_husky.samplemvvm.view.activity.MulTypeRecyclerBindActivity.MulRecyclerBindPresenterI" />
 
         <variable
             name="data"
@@ -19,18 +19,20 @@
         android:background="#ff0"
         android:orientation="horizontal">
 
-        <TextView
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:gravity="center_vertical"
+            android:textAllCaps="false"
             android:onClick="@{() -> itemPresenter.onNameClick(data)}"
             android:text="@{`Student Name : `+ data.name.get()}" />
 
-        <TextView
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:textAllCaps="false"
             android:gravity="center_vertical"
             android:onClick="@{() -> itemPresenter.onAgeClick(data)}"
             android:text="@{`Student Age : `+data.age}" />

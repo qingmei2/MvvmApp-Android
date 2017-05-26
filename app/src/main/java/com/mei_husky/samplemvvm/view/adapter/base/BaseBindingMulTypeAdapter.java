@@ -23,7 +23,7 @@ public abstract class BaseBindingMulTypeAdapter<T extends IMulTypeBindingBean, D
     private int layoutId;
 
     //用于设置Item的事件Presenter
-    protected BaseBindingPresenter ItemPresenter;
+    protected IBaseBindingPresenter ItemPresenter;
 
     public BaseBindingMulTypeAdapter(List<T> mDatas) {
         this.mDatas = mDatas;
@@ -66,7 +66,7 @@ public abstract class BaseBindingMulTypeAdapter<T extends IMulTypeBindingBean, D
      * @param itemPresenter
      * @return
      */
-    public BaseBindingMulTypeAdapter setItemPresenter(BaseBindingPresenter itemPresenter) {
+    public BaseBindingMulTypeAdapter setItemPresenter(IBaseBindingPresenter itemPresenter) {
         ItemPresenter = itemPresenter;
         return this;
     }

@@ -11,7 +11,7 @@ import com.mei_husky.samplemvvm.R;
 import com.mei_husky.samplemvvm.databinding.ActivityRecyclerBindBinding;
 import com.mei_husky.samplemvvm.model.Student;
 import com.mei_husky.samplemvvm.view.adapter.MulTypeBindAdapter;
-import com.mei_husky.samplemvvm.view.adapter.base.BaseBindingPresenter;
+import com.mei_husky.samplemvvm.view.adapter.base.IBaseBindingPresenter;
 
 import java.util.ArrayList;
 
@@ -37,13 +37,13 @@ public class MulTypeRecyclerBindActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         MulTypeBindAdapter adapter = new MulTypeBindAdapter(students);
-        adapter.setItemPresenter(new MulRecyclerBindPresenter());
+        adapter.setItemPresenter(new MulRecyclerBindPresenterI());
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(adapter);
     }
 
-    public class MulRecyclerBindPresenter implements BaseBindingPresenter {
+    public class MulRecyclerBindPresenterI implements IBaseBindingPresenter {
 
         public void onNameClick(Student student) {
             Toast.makeText(MulTypeRecyclerBindActivity.this, student.name.get(), Toast.LENGTH_SHORT).show();

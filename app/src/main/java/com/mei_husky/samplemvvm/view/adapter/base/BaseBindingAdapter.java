@@ -23,7 +23,7 @@ public abstract class BaseBindingAdapter<T, D extends ViewDataBinding> extends R
     private int layoutId;
 
     //用于设置Item的事件Presenter
-    protected BaseBindingPresenter ItemPresenter;
+    protected IBaseBindingPresenter ItemPresenter;
 
     public BaseBindingAdapter(List<T> mDatas, int layoutId) {
         this.mDatas = mDatas;
@@ -59,7 +59,7 @@ public abstract class BaseBindingAdapter<T, D extends ViewDataBinding> extends R
      * @param itemPresenter
      * @return
      */
-    public BaseBindingAdapter setItemPresenter(BaseBindingPresenter itemPresenter) {
+    public BaseBindingAdapter setItemPresenter(IBaseBindingPresenter itemPresenter) {
         ItemPresenter = itemPresenter;
         return this;
     }
