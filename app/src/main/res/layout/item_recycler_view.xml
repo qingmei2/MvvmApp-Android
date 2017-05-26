@@ -4,7 +4,11 @@
     <data>
 
         <variable
-            name="item_student"
+            name="itemPresenter"
+            type="com.mei_husky.samplemvvm.view.activity.RecyclerBindActivity.RecyclerBindPresenter" />
+
+        <variable
+            name="data"
             type="com.mei_husky.samplemvvm.model.Student" />
 
     </data>
@@ -20,7 +24,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:gravity="center_vertical"
-            android:text="@{`Student Name : `+ item_student.name.get()}" />
+            android:onClick="@{() -> itemPresenter.onNameClick(data.name.get())}"
+            android:text="@{`Student Name : `+ data.name.get()}" />
 
         <!--显示年龄，点击年龄+3，同时paddingleft也绑定年龄-->
         <TextView
@@ -28,8 +33,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:gravity="center_vertical"
-            android:paddingLeft="@{item_student.age}"
-            android:text="@{`Student Age : `+item_student.age}" />
+            android:paddingLeft="@{data.age}"
+            android:onClick="@{() -> itemPresenter.onAgeClick(String.valueOf(data.age))}"
+            android:text="@{`Student Age : `+data.age}" />
 
     </LinearLayout>
 </layout>
