@@ -7,7 +7,7 @@
 
         <variable
             name="presenter"
-            type="com.mei_husky.samplemvvm.view.MainActivity.Presenter" />
+            type="com.mei_husky.samplemvvm.view.activity.MainActivity.Presenter" />
 
     </data>
 
@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.mei_husky.samplemvvm.view.MainActivity">
+        tools:context="com.mei_husky.samplemvvm.view.activity.MainActivity">
 
         <Button
             android:layout_width="match_parent"
@@ -24,6 +24,13 @@
             android:textAllCaps="false"
             android:onClick="@{() -> presenter.baseDataBinding()}"
             android:text="@{`DataBinding基础使用` + presenter.message}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:onClick="@{() -> presenter.recyclerView()}"
+            android:text="@{`DataBinding 展示列表` + presenter.message}" />
 
 
     </LinearLayout>

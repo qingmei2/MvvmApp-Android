@@ -13,7 +13,7 @@
 
         <variable
             name="presenter"
-            type="com.mei_husky.samplemvvm.view.DataBindingBaseActivity.Presenter" />
+            type="com.mei_husky.samplemvvm.view.activity.DataBindingBaseActivity.Presenter" />
 
         <!--泛型的支持会在编译时期报红线，但是是可以直接运行的,但是需要通过转义字符才行，如：&lt;数据类型> 或者&lt;数据类型&gt;-->
         <variable
@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.mei_husky.samplemvvm.view.DataBindingBaseActivity">
+        tools:context="com.mei_husky.samplemvvm.view.activity.DataBindingBaseActivity">
 
         <!--固定字符 我们可以用 `` 包裹，对应的，外部用""包裹-->
         <Button

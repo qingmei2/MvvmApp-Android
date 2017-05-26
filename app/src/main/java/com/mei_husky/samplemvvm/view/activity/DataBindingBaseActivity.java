@@ -1,4 +1,4 @@
-package com.mei_husky.samplemvvm.view;
+package com.mei_husky.samplemvvm.view.activity;
 
 import android.databinding.DataBindingUtil;
 import android.databinding.ObservableArrayMap;

@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.MainActivity">
+        <activity android:name=".view.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,9 +17,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.DataBindingBaseActivity"
+            android:name=".view.activity.DataBindingBaseActivity"
             android:label="DataBindingBase" />
-        <activity android:name=".view.RecyclerBindActivity"></activity>
+        <activity android:name=".view.activity.RecyclerBindActivity"
+            android:label="列表展示"></activity>
     </application>
 
 </manifest>

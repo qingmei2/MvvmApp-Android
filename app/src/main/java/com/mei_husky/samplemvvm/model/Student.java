@@ -23,7 +23,8 @@ public class Student extends BaseObservable {
     /**
      * ObservableObject 实现数据绑定
      */
-    public int age;
+    //这里最好是private，否则在xml的代码提示会有两个age（1，成员变量的直接引用 2，代码模板生成 效果一样）
+    private int age;
 
     @Bindable
     public int getAge() {

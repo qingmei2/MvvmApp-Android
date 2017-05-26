@@ -1,4 +1,4 @@
-package com.mei_husky.samplemvvm.view;
+package com.mei_husky.samplemvvm.view.activity;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this,DataBindingBaseActivity.class));
         }
 
+        public void recyclerView(){
+            startActivity(new Intent(MainActivity.this,RecyclerBindActivity.class));
+        }
 
     }
 }
