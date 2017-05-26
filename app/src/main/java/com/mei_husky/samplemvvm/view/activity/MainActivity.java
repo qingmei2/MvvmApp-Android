@@ -35,12 +35,15 @@ public class MainActivity extends AppCompatActivity {
         public String message = " ~ ";
 
         public void baseDataBinding() {
-//            Toast.makeText(MainActivity.this, "Presenter.baseDataBinding", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(MainActivity.this,DataBindingBaseActivity.class));
         }
 
         public void recyclerView(){
             startActivity(new Intent(MainActivity.this,RecyclerBindActivity.class));
+        }
+
+        public void mulTypeRecyclerView(){
+            startActivity(new Intent(MainActivity.this,MulTypeRecyclerBindActivity.class));
         }
 
     }

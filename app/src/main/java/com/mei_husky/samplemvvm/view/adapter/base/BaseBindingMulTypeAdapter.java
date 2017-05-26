@@ -14,10 +14,10 @@ import java.util.List;
 
 /**
  * Created by fcn-mq on 2017/5/26.
- * 一般类型的RecyclerView Adapter
+ * 多类型列表的RecyclerView Adapter
  */
 
-public abstract class BaseBindingAdapter<T, D extends ViewDataBinding> extends RecyclerView.Adapter<BaseViewHolder<D>> {
+public abstract class BaseBindingMulTypeAdapter<T extends IMulTypeBindingBean, D extends ViewDataBinding> extends RecyclerView.Adapter<BaseViewHolder<D>> {
 
     private List<T> mDatas;
     private int layoutId;
@@ -25,15 +25,22 @@ public abstract class BaseBindingAdapter<T, D extends ViewDataBinding> extends R
     //用于设置Item的事件Presenter
     protected BaseBindingPresenter ItemPresenter;
 
-    public BaseBindingAdapter(List<T> mDatas, int layoutId) {
+    public BaseBindingMulTypeAdapter(List<T> mDatas) {
         this.mDatas = mDatas;
-        this.layoutId = layoutId;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if (mDatas != null && !mDatas.isEmpty()) {
+            return mDatas.get(position).getLayoutResouse();
+        }
+        return super.getItemViewType(position);
     }
 
     @Override
     public BaseViewHolder<D> onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        BaseViewHolder<D> viewHolder = new BaseViewHolder<D>((D) DataBindingUtil.inflate(inflater, layoutId, parent, false));
+        BaseViewHolder<D> viewHolder = new BaseViewHolder<D>((D) DataBindingUtil.inflate(inflater, viewType, parent, false));
         onCreateViewHolder(viewHolder);
         return viewHolder;
     }
@@ -59,7 +66,7 @@ public abstract class BaseBindingAdapter<T, D extends ViewDataBinding> extends R
      * @param itemPresenter
      * @return
      */
-    public BaseBindingAdapter setItemPresenter(BaseBindingPresenter itemPresenter) {
+    public BaseBindingMulTypeAdapter setItemPresenter(BaseBindingPresenter itemPresenter) {
         ItemPresenter = itemPresenter;
         return this;
     }
