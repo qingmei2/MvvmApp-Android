@@ -1,4 +1,4 @@
-package com.mei_husky.samplemvvm.view.adapter;
+package com.mei_husky.samplemvvm.view.adapter.base;
 
 import android.databinding.ViewDataBinding;
 import android.support.v7.widget.RecyclerView;

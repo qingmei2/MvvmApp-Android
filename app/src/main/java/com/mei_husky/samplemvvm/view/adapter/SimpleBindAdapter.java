@@ -2,6 +2,8 @@ package com.mei_husky.samplemvvm.view.adapter;
 
 import com.mei_husky.samplemvvm.databinding.ItemRecyclerViewBinding;
 import com.mei_husky.samplemvvm.model.Student;
+import com.mei_husky.samplemvvm.view.adapter.base.BaseBindingAdapter;
+import com.mei_husky.samplemvvm.view.adapter.base.BaseViewHolder;
 
 import java.util.List;
 

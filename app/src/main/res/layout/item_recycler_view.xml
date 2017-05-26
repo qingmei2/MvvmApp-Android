@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:gravity="center_vertical"
-            android:onClick="@{() -> itemPresenter.onNameClick(data.name.get())}"
+            android:onClick="@{() -> itemPresenter.onNameClick(data)}"
             android:text="@{`Student Name : `+ data.name.get()}" />
 
         <!--显示年龄，点击年龄+3，同时paddingleft也绑定年龄-->
@@ -33,8 +33,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:gravity="center_vertical"
+            android:onClick="@{() -> itemPresenter.onAgeClick(data)}"
             android:paddingLeft="@{data.age}"
-            android:onClick="@{() -> itemPresenter.onAgeClick(String.valueOf(data.age))}"
             android:text="@{`Student Age : `+data.age}" />
 
     </LinearLayout>

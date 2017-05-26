@@ -10,8 +10,8 @@ import android.widget.Toast;
 import com.mei_husky.samplemvvm.R;
 import com.mei_husky.samplemvvm.databinding.ActivityRecyclerBindBinding;
 import com.mei_husky.samplemvvm.model.Student;
-import com.mei_husky.samplemvvm.view.adapter.BaseBindingPresenter;
 import com.mei_husky.samplemvvm.view.adapter.SimpleBindAdapter;
+import com.mei_husky.samplemvvm.view.adapter.base.BaseBindingPresenter;
 
 import java.util.ArrayList;
 
@@ -41,12 +41,14 @@ public class RecyclerBindActivity extends AppCompatActivity {
 
     public class RecyclerBindPresenter implements BaseBindingPresenter {
 
-        public void onNameClick(String name) {
-            Toast.makeText(RecyclerBindActivity.this,name,Toast.LENGTH_SHORT).show();
+        public void onNameClick(Student student) {
+            Toast.makeText(RecyclerBindActivity.this, student.name.get() + "要改名字", Toast.LENGTH_SHORT).show();
+            student.name.set("我改名字啦！");
         }
 
-        public void onAgeClick(String age) {
-            Toast.makeText(RecyclerBindActivity.this,age,Toast.LENGTH_SHORT).show();
+        public void onAgeClick(Student student) {
+            Toast.makeText(RecyclerBindActivity.this, String.valueOf("涨了三岁"), Toast.LENGTH_SHORT).show();
+            student.setAge(student.getAge()+3);
         }
     }
 

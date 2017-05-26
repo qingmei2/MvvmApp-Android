@@ -1,4 +1,4 @@
-package com.mei_husky.samplemvvm.view.adapter;
+package com.mei_husky.samplemvvm.view.adapter.base;
 
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
