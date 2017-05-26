@@ -14,6 +14,9 @@ public class BindingUtil {
      * 通过 BindingAdapter 注释来自定义属性调用的静态setter方法。android 系统已经创建了 BindingAdapter 函数，下面是 paddingLeft 属性
      * 对应的函数
      *
+     * 该效果展示在->MainActivity ->Databinding展示列表 -> 点击item的Age按钮
+     * {@link com.mei_husky.samplemvvm.view.activity.RecyclerBindActivity}
+     *
      * @param view
      * @param padding
      */
