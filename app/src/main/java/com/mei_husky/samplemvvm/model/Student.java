@@ -6,6 +6,7 @@ import android.databinding.ObservableField;
 
 import com.mei_husky.samplemvvm.BR;
 import com.mei_husky.samplemvvm.R;
+import com.mei_husky.samplemvvm.view.activity.A04MulTypeRecyclerBindActivity;
 import com.mei_husky.samplemvvm.view.adapter.base.IMulTypeBindingBean;
 
 /**
@@ -49,7 +50,7 @@ public class Student extends BaseObservable implements IMulTypeBindingBean {
      * IMulTypeBindingBean接口的实现方法
      *
      * 使用方法请见DataBinding多类型列表Activity的展示（该接口方法仅在该界面使用）
-     * {@link com.mei_husky.samplemvvm.view.activity.MulTypeRecyclerBindActivity}
+     * {@link A04MulTypeRecyclerBindActivity}
      *
      * @return 如果30岁以下和30岁以上，数据展示在不同的layout上（背景色不同）
      */

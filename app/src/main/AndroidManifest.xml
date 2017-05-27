@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.activity.MainActivity">
+        <activity android:name=".view.activity.A01MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,20 +18,20 @@
         </activity>
 
         <activity
-            android:name=".view.activity.DataBindingBaseActivity"
+            android:name=".view.activity.A02DataBindingBaseActivity"
             android:label="DataBindingBase" />
 
-        <activity android:name=".view.activity.RecyclerBindActivity"
+        <activity android:name=".view.activity.A03RecyclerBindActivity"
             android:label="列表展示"/>
 
-        <activity android:name=".view.activity.MulTypeRecyclerBindActivity"
+        <activity android:name=".view.activity.A04MulTypeRecyclerBindActivity"
             android:label="多类型列表展示"/>
 
-        <activity android:name=".view.activity.MvvmActivity"
+        <activity android:name=".view.activity.A06MvvmActivity"
             android:label="Mvvm"/>
 
 
-        <activity android:name=".view.activity.MultiTypeStudyActivity"
+        <activity android:name=".view.activity.A05MultiTypeStudyActivity"
             android:label="MultiType库学习"/>
 
     </application>

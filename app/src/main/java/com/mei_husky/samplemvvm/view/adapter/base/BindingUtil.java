@@ -3,6 +3,8 @@ package com.mei_husky.samplemvvm.view.adapter.base;
 import android.databinding.BindingAdapter;
 import android.view.View;
 
+import com.mei_husky.samplemvvm.view.activity.A03RecyclerBindActivity;
+
 /**
  * Created by fcn-mq on 2017/5/26.
  */
@@ -15,7 +17,7 @@ public class BindingUtil {
      * 对应的函数
      * <p>
      * 该效果展示在->MainActivity ->Databinding展示列表 -> 点击item的Age按钮
-     * {@link com.mei_husky.samplemvvm.view.activity.RecyclerBindActivity}
+     * {@link A03RecyclerBindActivity}
      *
      * @param view
      * @param padding

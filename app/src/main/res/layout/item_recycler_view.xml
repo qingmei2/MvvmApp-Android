@@ -5,7 +5,7 @@
 
         <variable
             name="itemPresenter"
-            type="com.mei_husky.samplemvvm.view.activity.RecyclerBindActivity.RecyclerBindPresenter" />
+            type="com.mei_husky.samplemvvm.view.activity.A03RecyclerBindActivity.RecyclerBindPresenter" />
 
         <variable
             name="data"

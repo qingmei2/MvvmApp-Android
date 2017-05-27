@@ -14,7 +14,7 @@ import com.mei_husky.samplemvvm.model.Student;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataBindingBaseActivity extends AppCompatActivity {
+public class A02DataBindingBaseActivity extends AppCompatActivity {
 
     private ActivityDataBindingBaseBinding binding;
 
@@ -45,12 +45,12 @@ public class DataBindingBaseActivity extends AppCompatActivity {
     public class Presenter {
 
         public void onNameClick(String Name) {
-            Toast.makeText(DataBindingBaseActivity.this, Name, Toast.LENGTH_SHORT).show();
+            Toast.makeText(A02DataBindingBaseActivity.this, Name, Toast.LENGTH_SHORT).show();
         }
 
 
         public void onAgeClick(int age) {
-            Toast.makeText(DataBindingBaseActivity.this, String.valueOf(age), Toast.LENGTH_SHORT).show();
+            Toast.makeText(A02DataBindingBaseActivity.this, String.valueOf(age), Toast.LENGTH_SHORT).show();
         }
 
         /**

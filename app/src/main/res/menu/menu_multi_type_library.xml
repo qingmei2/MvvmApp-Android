@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/singleList"
+        android:title="简单列表展示"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/multiTypeList"
+        android:title="多类型列表展示"
+        app:showAsAction="never" />
+
+</menu>

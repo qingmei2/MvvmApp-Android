@@ -15,7 +15,7 @@ import com.mei_husky.samplemvvm.view.adapter.base.IBaseBindingPresenter;
 
 import java.util.ArrayList;
 
-public class RecyclerBindActivity extends AppCompatActivity {
+public class A03RecyclerBindActivity extends AppCompatActivity {
 
     private ActivityRecyclerBindBinding binding;
 
@@ -43,7 +43,7 @@ public class RecyclerBindActivity extends AppCompatActivity {
     public class RecyclerBindPresenter implements IBaseBindingPresenter {
 
         public void onNameClick(Student student) {
-            Toast.makeText(RecyclerBindActivity.this, student.name.get() + "要改名字", Toast.LENGTH_SHORT).show();
+            Toast.makeText(A03RecyclerBindActivity.this, student.name.get() + "要改名字", Toast.LENGTH_SHORT).show();
             student.name.set("我改名字啦！");
         }
 
@@ -52,7 +52,7 @@ public class RecyclerBindActivity extends AppCompatActivity {
          * {@link com.mei_husky.samplemvvm.view.adapter.binder.BindingUtil}
          */
         public void onAgeClick(Student student) {
-            Toast.makeText(RecyclerBindActivity.this, String.valueOf("涨了三岁"), Toast.LENGTH_SHORT).show();
+            Toast.makeText(A03RecyclerBindActivity.this, String.valueOf("涨了三岁"), Toast.LENGTH_SHORT).show();
             student.setAge(student.getAge() + 3);
         }
     }

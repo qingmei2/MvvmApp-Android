@@ -23,7 +23,7 @@ import me.drakeet.multitype.MultiTypeAdapter;
  * drakeet/Effective-MultiType Library学习Activity
  */
 
-public class MultiTypeStudyActivity extends AppCompatActivity {
+public class A05MultiTypeStudyActivity extends AppCompatActivity {
 
     private ActivityRecyclerBindBinding binding;
 
@@ -76,5 +76,7 @@ public class MultiTypeStudyActivity extends AppCompatActivity {
         adapter.setItems(items);
         adapter.notifyDataSetChanged();
     }
+
+
 
 }

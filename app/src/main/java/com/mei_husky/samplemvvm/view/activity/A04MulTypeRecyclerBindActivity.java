@@ -18,7 +18,7 @@ import java.util.ArrayList;
 /**
  * 多类型列表
  */
-public class MulTypeRecyclerBindActivity extends AppCompatActivity {
+public class A04MulTypeRecyclerBindActivity extends AppCompatActivity {
 
     private ActivityRecyclerBindBinding binding;
 
@@ -47,11 +47,11 @@ public class MulTypeRecyclerBindActivity extends AppCompatActivity {
     public class MulRecyclerBindPresenterI implements IBaseBindingPresenter {
 
         public void onNameClick(Student student) {
-            Toast.makeText(MulTypeRecyclerBindActivity.this, student.name.get(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(A04MulTypeRecyclerBindActivity.this, student.name.get(), Toast.LENGTH_SHORT).show();
         }
 
         public void onAgeClick(Student student) {
-            Toast.makeText(MulTypeRecyclerBindActivity.this, String.valueOf(student.getAge()), Toast.LENGTH_SHORT).show();
+            Toast.makeText(A04MulTypeRecyclerBindActivity.this, String.valueOf(student.getAge()), Toast.LENGTH_SHORT).show();
         }
     }
 

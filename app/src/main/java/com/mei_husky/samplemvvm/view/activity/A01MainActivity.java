@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.mei_husky.samplemvvm.R;
 import com.mei_husky.samplemvvm.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class A01MainActivity extends AppCompatActivity {
 
     public Presenter presenter;
 
@@ -35,23 +35,23 @@ public class MainActivity extends AppCompatActivity {
         public String message = " ~ ";
 
         public void baseDataBinding() {
-            startActivity(new Intent(MainActivity.this,DataBindingBaseActivity.class));
+            startActivity(new Intent(A01MainActivity.this,A02DataBindingBaseActivity.class));
         }
 
         public void recyclerView(){
-            startActivity(new Intent(MainActivity.this,RecyclerBindActivity.class));
+            startActivity(new Intent(A01MainActivity.this,A03RecyclerBindActivity.class));
         }
 
         public void mulTypeRecyclerView(){
-            startActivity(new Intent(MainActivity.this,MulTypeRecyclerBindActivity.class));
+            startActivity(new Intent(A01MainActivity.this,A04MulTypeRecyclerBindActivity.class));
         }
 
         public void mvvm(){
-            startActivity(new Intent(MainActivity.this,MvvmActivity.class));
+            startActivity(new Intent(A01MainActivity.this,A06MvvmActivity.class));
         }
 
         public void studyLibrary(){
-            startActivity(new Intent(MainActivity.this,MultiTypeStudyActivity.class));
+            startActivity(new Intent(A01MainActivity.this,A05MultiTypeStudyActivity.class));
         }
     }
 }

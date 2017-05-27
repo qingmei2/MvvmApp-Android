@@ -7,7 +7,7 @@
 
         <variable
             name="presenter"
-            type="com.mei_husky.samplemvvm.view.activity.MainActivity.Presenter" />
+            type="com.mei_husky.samplemvvm.view.activity.A01MainActivity.Presenter" />
 
     </data>
 
@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.mei_husky.samplemvvm.view.activity.MainActivity">
+        tools:context="com.mei_husky.samplemvvm.view.activity.A01MainActivity">
 
         <Button
             android:layout_width="match_parent"
@@ -43,14 +43,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
-            android:onClick="@{() -> presenter.mvvm()}"
-            android:text="@{`DataBinding Mvvm` + presenter.message}" />
-
+            android:onClick="@{() -> presenter.studyLibrary()}"
+            android:text="@{`MultiType库学习` + presenter.message}" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
-            android:onClick="@{() -> presenter.studyLibrary()}"
-            android:text="@{`MultiType库学习` + presenter.message}" />
+            android:onClick="@{() -> presenter.mvvm()}"
+            android:text="@{`DataBinding Mvvm` + presenter.message}" />
+
     </LinearLayout>
 </layout>
