@@ -27,6 +27,9 @@
         <activity android:name=".view.activity.MulTypeRecyclerBindActivity"
             android:label="多类型列表展示"/>
 
+        <activity android:name=".view.activity.MvvmActivity"
+            android:label="Mvvm"/>
+
     </application>
 
 </manifest>

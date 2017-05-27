@@ -38,5 +38,12 @@
             android:textAllCaps="false"
             android:onClick="@{() -> presenter.mulTypeRecyclerView()}"
             android:text="@{`DataBinding 展示多类型列表` + presenter.message}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:onClick="@{() -> presenter.mvvm()}"
+            android:text="@{`DataBinding Mvvm` + presenter.message}" />
     </LinearLayout>
 </layout>

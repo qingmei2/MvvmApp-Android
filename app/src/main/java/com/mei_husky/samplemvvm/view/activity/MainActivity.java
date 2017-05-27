@@ -46,5 +46,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this,MulTypeRecyclerBindActivity.class));
         }
 
+        public void mvvm(){
+            startActivity(new Intent(MainActivity.this,MvvmActivity.class));
+        }
     }
 }

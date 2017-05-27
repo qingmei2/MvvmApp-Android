@@ -31,15 +31,16 @@ public class RecyclerBindActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_recycler_bind);
 
         ArrayList<Student> students = getStudents();
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         SimpleBindAdapter adapter = new SimpleBindAdapter(students, R.layout.item_recycler_view);
-        adapter.setItemPresenter(new RecyclerBindPresenterI());
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        recyclerView.setAdapter(adapter);
+        adapter.setItemPresenter(new RecyclerBindPresenter());
+        binding.recyclerView
+                .setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        binding.recyclerView
+                .setAdapter(adapter);
     }
 
-    public class RecyclerBindPresenterI implements IBaseBindingPresenter {
+    public class RecyclerBindPresenter implements IBaseBindingPresenter {
 
         public void onNameClick(Student student) {
             Toast.makeText(RecyclerBindActivity.this, student.name.get() + "要改名字", Toast.LENGTH_SHORT).show();
@@ -52,7 +53,7 @@ public class RecyclerBindActivity extends AppCompatActivity {
          */
         public void onAgeClick(Student student) {
             Toast.makeText(RecyclerBindActivity.this, String.valueOf("涨了三岁"), Toast.LENGTH_SHORT).show();
-            student.setAge(student.getAge()+3);
+            student.setAge(student.getAge() + 3);
         }
     }
 

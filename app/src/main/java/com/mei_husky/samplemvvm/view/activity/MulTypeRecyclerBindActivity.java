@@ -34,13 +34,14 @@ public class MulTypeRecyclerBindActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_recycler_bind);
 
         ArrayList<Student> students = getStudents();
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         MulTypeBindAdapter adapter = new MulTypeBindAdapter(students);
         adapter.setItemPresenter(new MulRecyclerBindPresenterI());
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        recyclerView.setAdapter(adapter);
+        binding.recyclerView
+                .setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        binding.recyclerView
+                .setAdapter(adapter);
     }
 
     public class MulRecyclerBindPresenterI implements IBaseBindingPresenter {
