@@ -27,4 +27,5 @@ public class BindingUtil {
                 view.getPaddingRight(),
                 view.getPaddingBottom());
     }
+
 }
