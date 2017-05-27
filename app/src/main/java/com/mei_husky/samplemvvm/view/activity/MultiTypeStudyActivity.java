@@ -10,9 +10,9 @@ import android.util.Log;
 import com.mei_husky.samplemvvm.R;
 import com.mei_husky.samplemvvm.databinding.ActivityRecyclerBindBinding;
 import com.mei_husky.samplemvvm.model.Student;
-import com.mei_husky.samplemvvm.view.binder.MultiTypeBinder;
-import com.mei_husky.samplemvvm.view.binder.MultiTypeBinder1;
-import com.mei_husky.samplemvvm.view.binder.MultiTypeBinder2;
+import com.mei_husky.samplemvvm.view.adapter.binder.MultiTypeBinder;
+import com.mei_husky.samplemvvm.view.adapter.binder.MultiTypeBinder1;
+import com.mei_husky.samplemvvm.view.adapter.binder.MultiTypeBinder2;
 
 import me.drakeet.multitype.Items;
 import me.drakeet.multitype.MultiTypeAdapter;

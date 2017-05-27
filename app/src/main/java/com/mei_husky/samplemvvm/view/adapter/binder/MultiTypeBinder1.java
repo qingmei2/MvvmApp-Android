@@ -1,4 +1,4 @@
-package com.mei_husky.samplemvvm.view.binder;
+package com.mei_husky.samplemvvm.view.adapter.binder;
 
 import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;

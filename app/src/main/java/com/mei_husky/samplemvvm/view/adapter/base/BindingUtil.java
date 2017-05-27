@@ -1,4 +1,4 @@
-package com.mei_husky.samplemvvm.view.binder;
+package com.mei_husky.samplemvvm.view.adapter.base;
 
 import android.databinding.BindingAdapter;
 import android.view.View;
