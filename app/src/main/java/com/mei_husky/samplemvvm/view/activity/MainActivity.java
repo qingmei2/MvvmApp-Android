@@ -49,5 +49,9 @@ public class MainActivity extends AppCompatActivity {
         public void mvvm(){
             startActivity(new Intent(MainActivity.this,MvvmActivity.class));
         }
+
+        public void studyLibrary(){
+            startActivity(new Intent(MainActivity.this,MultiTypeStudyActivity.class));
+        }
     }
 }

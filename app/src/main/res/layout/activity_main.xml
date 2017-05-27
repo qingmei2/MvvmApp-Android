@@ -45,5 +45,12 @@
             android:textAllCaps="false"
             android:onClick="@{() -> presenter.mvvm()}"
             android:text="@{`DataBinding Mvvm` + presenter.message}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:onClick="@{() -> presenter.studyLibrary()}"
+            android:text="@{`MultiType库学习` + presenter.message}" />
     </LinearLayout>
 </layout>

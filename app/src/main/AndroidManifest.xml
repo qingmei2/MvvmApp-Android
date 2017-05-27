@@ -30,6 +30,10 @@
         <activity android:name=".view.activity.MvvmActivity"
             android:label="Mvvm"/>
 
+
+        <activity android:name=".view.activity.MultiTypeStudyActivity"
+            android:label="MultiType库学习"/>
+
     </application>
 
 </manifest>

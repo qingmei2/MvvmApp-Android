@@ -49,7 +49,7 @@ public class RecyclerBindActivity extends AppCompatActivity {
 
         /**
          * 点击用户年龄 += 3，且空间的左内边距+=3；
-         * {@link com.mei_husky.samplemvvm.view.bind.BindingUtil}
+         * {@link com.mei_husky.samplemvvm.view.binder.BindingUtil}
          */
         public void onAgeClick(Student student) {
             Toast.makeText(RecyclerBindActivity.this, String.valueOf("涨了三岁"), Toast.LENGTH_SHORT).show();
