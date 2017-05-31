@@ -4,6 +4,7 @@
 
     <application
         android:allowBackup="true"
+        android:name=".common.MyApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -29,7 +30,6 @@
 
         <activity android:name=".view.activity.A06MvvmActivity"
             android:label="Mvvm"/>
-
 
         <activity android:name=".view.activity.A05MultiTypeStudyActivity"
             android:label="MultiType库学习"/>

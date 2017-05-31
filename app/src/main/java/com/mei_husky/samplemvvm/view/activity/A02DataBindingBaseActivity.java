@@ -36,7 +36,7 @@ public class A02DataBindingBaseActivity extends AppCompatActivity {
         contents.add("content -> 1");
 
 //        以下两种方式 给XML中 student 赋值
-//        binding.setStudent(student);
+//        mBinding.setStudent(student);
         binding.setVariable(BR.student, student);
         binding.setPresenter(new Presenter());
         binding.setContents(contents);
