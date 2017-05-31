@@ -6,6 +6,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.mei_husky.samplemvvm.R;
 import com.mei_husky.samplemvvm.databinding.ActivityRecyclerBindBinding;
@@ -66,7 +68,6 @@ public class A05MultiTypeStudyActivity extends AppCompatActivity {
         binding.recyclerView.setAdapter(adapter);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-
         Items items = new Items();
         for (int i = 0; i < 10; i++) {
             items.add(new String("Songs"));
@@ -77,6 +78,22 @@ public class A05MultiTypeStudyActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_multi_type_library,menu);
+        return true;
+    }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.singleList:
+                showSingleList();
+                break;
+            case R.id.multiTypeList:
+                showMultiTypeList();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
