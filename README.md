@@ -3,18 +3,26 @@
 
 内容包含：
 
-### MainActivity 
+### A01MainActivity 
 
 DataBinding的入门使用以及引导界面
 
-### DataBindingBaseActivity 
+### A02DataBindingBaseActivity 
 
  Databinding的使用
 
-### RecyclerBindActivity 
+### A03RecyclerBindActivity 
  
  RecyclerView中使用dataBinding进行列表展示
  
-### MulTypeRecyclerBindActivity
+### A04MulTypeRecyclerBindActivity
 
  RecyclerView中使用dataBinding展示多类型列表
+ 
+### A05MultiTypeStudyActivity
+
+ MultiType库+DataBinding展示RecyclerView多类型列表
+ 
+###  A06MvvmActivity
+ 
+ 简单搭建MVVM+DataBinding+Dagger2的界面
