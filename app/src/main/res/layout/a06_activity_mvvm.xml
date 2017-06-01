@@ -5,11 +5,11 @@
 
         <variable
             name="activity"
-            type="com.mei_husky.samplemvvm.view.activity.A06MvvmActivity"/>
-        
+            type="com.mei_husky.samplemvvm.view.activity.A06MvvmActivity" />
+
         <variable
             name="viewModel"
-            type="com.mei_husky.samplemvvm.viewmodel.A06MvvmViewModel"/>
+            type="com.mei_husky.samplemvvm.viewmodel.A06MvvmViewModel" />
 
     </data>
 
@@ -19,8 +19,27 @@
         android:orientation="vertical">
 
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{`学生姓名：` + viewModel.student.get().name}" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.changeName()}"
+            android:text="点击修改Student姓名" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.getMovieInfo()}"
+            android:text="点击请求电影信息" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.movieInfo.get() == null ? `没有电影信息` : viewModel.movieInfo.get().getSummary()}" />
 
     </LinearLayout>
 

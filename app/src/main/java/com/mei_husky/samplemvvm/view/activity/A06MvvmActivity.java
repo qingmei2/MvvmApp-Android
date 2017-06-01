@@ -28,10 +28,15 @@ public class A06MvvmActivity extends BaseMvvmActivity<A06ActivityMvvmBinding, A0
                 .build();
         component.injectActivity(this);
         component.injectViewModel(mViewModel);
+
+        mBinding.setActivity(this);
+        mBinding.setViewModel(mViewModel);
     }
 
     @Override
     protected int getLayoutRes() {
         return R.layout.a06_activity_mvvm;
     }
+
+
 }

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.mei_husky.samplemvvm.common.Constants;
+import com.mei_husky.samplemvvm.model.api.ServiceManager;
 
 import javax.inject.Singleton;
 
@@ -33,5 +34,11 @@ public class AppModule {
     @Singleton
     SharedPreferences provideDefaultSp() {
         return context.getSharedPreferences(Constants.SP.DEFAULT_SP_NAME, Context.MODE_PRIVATE);
+    }
+
+    @Provides
+    @Singleton
+    ServiceManager provideMovieService() {
+        return new ServiceManager();
     }
 }

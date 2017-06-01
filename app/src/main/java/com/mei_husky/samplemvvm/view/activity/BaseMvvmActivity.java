@@ -24,13 +24,20 @@ public abstract class BaseMvvmActivity<T extends ViewDataBinding, D extends Base
         inject();
     }
 
-    private void initDataBinding() {
+    protected void initDataBinding() {
         int layoutId = getLayoutRes();
         mBinding = DataBindingUtil.setContentView(this, layoutId);
     }
 
+    /**
+     * 初始化DataBinding 和 Dagger2依赖注入
+     */
     protected abstract void inject();
 
+    /**
+     * 传入布局文件
+     * @return 基类会自动生成对应的DataBinding供导出类使用
+     */
     protected abstract int getLayoutRes();
 
     @Override
