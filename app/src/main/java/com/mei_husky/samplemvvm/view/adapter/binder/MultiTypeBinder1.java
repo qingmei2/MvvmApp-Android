@@ -30,6 +30,5 @@ public class MultiTypeBinder1 extends ItemViewBinder<Student,BaseViewHolder<Item
     protected void onBindViewHolder(@NonNull BaseViewHolder<ItemMultitypeLibraryView1Binding> holder, @NonNull Student item) {
         holder.getBinding().setData(item);
         holder.getBinding().executePendingBindings();
-
     }
 }
