@@ -1,5 +1,11 @@
 # MvvmApp
-使用了 Mvvm+DataBinding 搭建的DemoApp
+使用了 Mvvm+DataBinding 搭建的DemoApp（已停止维护）
+
+## 补充说明
+
+> 时隔一年，这个demo已经没有足够的学习价值，因此该项目已停止维护。  
+> 相比前者，我更喜欢MVVM架构中这次项目实践，它更趋近我理想中的设计，更加Reactive和Functional：  
+[MVVM-Rhine:The MVVM Architecture in Android.](https://github.com/qingmei2/MVVM-Rhine)
 
 内容包含：
 
